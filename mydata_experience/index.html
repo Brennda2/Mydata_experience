@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyData Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="goPage('home')">My<span>Data</span> Experience</div>
+  <div class="nav-links">
+    <button class="nav-btn active" onclick="goPage('home')">Início</button>
+    <button class="nav-btn" onclick="goPage('education')">Educação</button>
+    <button class="nav-btn" onclick="goPage('comparativo')">Comparativo</button>
+    <button class="nav-btn" onclick="goPage('seguranca')">Segurança</button>
+    <button class="nav-btn" onclick="goPage('quiz')">Quiz</button>
+  </div>
+</nav>
+
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="particles" id="particles"></div>
+    <div class="hero-badge">✦ Sistema de Triagem Inteligente </div>
+    <h1 class="fade-up fade-up-1">Bem-vindo ao <span>MyData</span><br/>Experience</h1>
+    <p class="fade-up fade-up-2">Descubra como a tecnologia de nuvem pode transformar sua empresa. Aprenda, compare e experimente antes de contratar.</p>
+    <div class="hero-btns fade-up fade-up-3">
+      <button class="btn-primary" onclick="document.getElementById('flashcards-section').scrollIntoView({behavior:'smooth'})">🚀 Explorar Agora</button>
+    </div>
+  </div>
+<!-- FLASHCARDS -->
+  <div id="flashcards-section" class="section">
+    <h2 class="section-title">Você sabia? </h2>
+    <p class="section-sub">Clique nos cards para descobrir fatos curiosos sobre segurança digital e como a MyData Cloud pode ajudar a proteger o seu negócio.</p>
+    <div class="flashcards-grid">
+      <!-- Card 1 -->
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div>
+              <div class="fc-icon">🐟</div>
+              <div class="fc-tag">Caso do Aquário</div>
+              <div class="fc-question">Um hacker conseguiu invadir um cassino usando… um aquário?</div>
+            </div>
+            <div class="fc-hint">Clique para descobrir como 👆</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="fc-answer">
+              <strong>Sobre o Caso</strong><br/><br/>
+              Hackers invadiram a rede de um cassino utilizando como porta de entrada o termômetro inteligente de um aquário. Como esse dispositivo estava conectado à mesma rede dos computadores centrais, os invasores conseguiram migrar pelo sistema e roubar dados confidenciais de clientes. O incidente provou que dispositivos vulneráveis de internet das coisas (IoT) devem ser isolados e nunca podem "enxergar" a rede de dados sensíveis da empresa.
+            </div>
+            <button class="fc-service-btn" onclick="openModal('vpc')">🔒 Ver Soluções de Segurança →</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div>
+              <div class="fc-icon">📋</div>
+              <div class="fc-tag">Caso Equifax</div>
+              <div class="fc-question">147 milhões de pessoas tiveram dados vazados por causa de uma atualização não instalada. Isso poderia acontecer com você?</div>
+            </div>
+            <div class="fc-hint">Clique para descobrir como 👆</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="fc-answer">
+              <strong>Sobre o Caso</strong><br/><br/>
+              Devido à ausência de uma rotina eficiente de atualização de sistemas, a empresa negligenciou por meses a aplicação de uma correção de segurança essencial para uma vulnerabilidade conhecida. Essa falha de governança permitiu que cibercriminosos invadissem a rede corporativa, resultando no histórico vazamento de dados pessoais de 147 milhões de consumidores.
+            </div>
+            <button class="fc-service-btn" onclick="openModal('backup')">☁️ Ver Cloud Backup →</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div>
+              <div class="fc-icon">🔑</div>
+              <div class="fc-tag">Caso Uber</div>
+              <div class="fc-question">Desenvolvedores do Uber deixaram a "chave da mansão" pública na internet. Como isso é possível?</div>
+            </div>
+            <div class="fc-hint">Clique para descobrir como 👆</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="fc-answer">
+              <strong>Sobre o Caso</strong><br/><br/>
+              Desenvolvedores cometeram o erro de incluir credenciais de acesso administrativas diretamente no código-fonte de um projeto, que foi posteriormente publicado em um repositório público na plataforma GitHub. Fazendo com que Hackers tivessem as chaves expostas e as utilizaram para acessar os servidores de nuvem da empresa. A invasão resultou no roubo de informações confidenciais de aproximadamente 57 milhões de usuários e motoristas, evidenciando o risco crítico de gerenciar senhas e chaves de acesso de forma manual e descentralizada.
+            </div>
+            <button class="fc-service-btn" onclick="openModal('iam')">🛡️ Ver Soluções de Segurança →</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div>
+              <div class="fc-icon">🏦</div>
+              <div class="fc-tag">Caso Capital One</div>
+              <div class="fc-question">Uma hacker enganou um servidor bancário para que ele entregasse as próprias credenciais de administrador. Como?</div>
+            </div>
+            <div class="fc-hint">Clique para descobrir como 👆</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="fc-answer">
+              <strong>Sobre o Caso</strong><br/><br/>
+              Neste incidente, um hacker explorou uma vulnerabilidade de segurança conhecida como SSRF (Falsificação de Solicitação do Lado do Servidor) para enganar o servidor de nuvem da instituição financeira. Devido a uma falha de configuração, o servidor possuía permissões de acesso muito além do necessário para suas funções diárias, o que permitiu ao invasor extrair credenciais administrativas de alto nível e acessar dados confidenciais de mais de 100 milhões de clientes.
+            </div>
+            <button class="fc-service-btn" onclick="openModal('priv')">🔐 Ver Soluções de Segurança →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-bg">
+    <div style="max-width:1200px;margin:0 auto;padding:0 48px 0;">
+      <h2 class="section-title" style="margin-bottom:12px;">Explore tudo que preparamos para você</h2>
+      <p class="section-sub" style="margin-bottom:40px;">Conteúdo completo para você entender, comparar e se proteger no mundo digital.</p>
+    </div>
+    <div class="preview-grid">
+      <div class="preview-card" onclick="goPage('education')">
+        <div class="preview-icon">📚</div>
+        <h3>Conteúdo Educativo</h3>
+        <p>Aprenda os conceitos fundamentais de tecnologia em nuvem: Data Center, Backup, VPN e muito mais.</p>
+        <button class="preview-link">Aprender agora →</button>
+      </div>
+      <div class="preview-card" onclick="goPage('comparativo')">
+        <div class="preview-icon">⚖️</div>
+        <h3>Comparativo de Provedores</h3>
+        <p>Compare MyData Cloud com AWS e Azure. Descubra por que a solução local pode ser a melhor escolha para sua empresa.</p>
+        <button class="preview-link">Ver comparativo →</button>
+      </div>
+      <div class="preview-card" onclick="goPage('seguranca')">
+        <div class="preview-icon">🛡️</div>
+        <h3>Simulador de Segurança</h3>
+        <p>Descubra o nível de risco da sua empresa com nosso simulador e veja como a MyData pode ajudar a proteger seu negócio.</p>
+        <button class="preview-link">Simular agora →</button>
+      </div>
+      <div class="preview-card" onclick="goPage('quiz')">
+        <div class="preview-icon">🎯</div>
+        <h3>Questionário Interativo</h3>
+        <p>Teste seus conhecimentos sobre segurança e nuvem. Veja o quanto você já aprendeu e descubra novos conceitos.</p>
+        <button class="preview-link">Fazer o quiz →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-final">
+    <h2>Pronto para dar o próximo passo?</h2>
+    <p>Fale com um especialista MyData e descubra a solução ideal para o seu negócio.</p>
+    <a href="https://www.mydatacloud.com.br/contact-3" class="btn-white" style="text-decoration: none; display: inline-block;">💬 Fale conosco</a>
+  </div>
+  <footer><span>MyData Experience</span> — Projeto desenvolvido na disciplina Fábrica de Projetos Ágeis III</footer>
+</div>
+
+<div id="page-education" class="page">
+  <div style="background:linear-gradient(135deg,#0A2540,#1a4a8a);color:#fff;padding:80px 48px;text-align:center;">
+    <div style="display:inline-block;background:rgba(26,188,254,0.15);border:1px solid rgba(26,188,254,0.3);color:var(--azul-hover);font-family:Montserrat,sans-serif;font-weight:700;font-size:0.75rem;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:2px;text-transform:uppercase;">📚 Área Educativa</div>
+    <h1 style="font-size:2.5rem;font-weight:900;margin-bottom:12px;">Aprenda sobre Tecnologia em Nuvem</h1>
+    <p style="color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto;line-height:1.7;">Todos os conceitos que você precisa saber para tomar decisões tecnológicas inteligentes para o seu negócio.</p>
+  </div>
+
+  <div class="section">
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>🏢 Data Center</h3>
+        <p>Um Data Center é uma instalação física que abriga servidores, redes e equipamentos de TI, essencial para a infraestrutura tecnológica das empresas.</p>
+        <p>Com segurança avançada e refrigeração adequada, é onde toda a infraestrutura se conecta e roda de maneira segura.</p>
+        <button class="edu-service-btn" onclick="openModal('datacenter')">🏢 Conhecer Data Center →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🔄 Backup</h3>
+        <p>É uma cópia de segurança dos seus dados. Garante que você não perca informações importantes em caso de falha no sistema, erro humano, ataque cibernético ou desastres naturais.</p>
+        <p>Backup é mais do que uma simples cópia — é uma <strong>estratégia essencial</strong> para proteger suas informações. Afinal, nunca sabemos quando algo pode dar errado.</p>
+        <button class="edu-service-btn" onclick="openModal('backup')">☁️ Conhecer Cloud Backup →</button>
+      </div>
+      <div class="edu-card">
+        <h3>☁️ Data Cloud</h3>
+        <p>O Data Cloud é uma infraestrutura de armazenamento e análise de dados baseada na nuvem, que permite às empresas guardar grandes volumes de informações de forma econômica e escalável, sem precisar investir em estrutura física.</p>
+        <p>Oferece <strong>segurança, alta disponibilidade, integração entre sistemas</strong>, acesso remoto e escalabilidade automática, acompanhando o crescimento do negócio.</p>
+        <button class="edu-service-btn" onclick="openModal('datacloud')">🚀 Ir para a Nuvem →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🔗 Omnichannel em Nuvem</h3>
+        <p>A estratégia omnichannel integra diferentes canais de comunicação em uma única estrutura: telefone, chat, redes sociais, e-mail, aplicativo ou loja física. Garante continuidade, consistência e clareza durante toda a jornada do cliente.</p>
+        <p>Essa integração amplia a capacidade de oferecer <strong>atendimentos personalizados</strong> considerando preferências, histórico e necessidades reais de cada cliente.</p>
+        <button class="edu-service-btn" onclick="openModal('omnichannel')">💬 Conhecer Com.unica →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🔒 VPN</h3>
+        <p>É uma tecnologia que cria uma conexão segura e criptografada entre um dispositivo e a internet, protegendo os dados durante a navegação. Permite acessar redes e sistemas de forma remota com segurança.</p>
+        <p>Para o negócio, é essencial porque <strong>garante acesso seguro para colaboradores</strong>, protege dados sensíveis e facilita o trabalho remoto com mais confiabilidade.</p>
+        <button class="edu-service-btn" onclick="openModal('vpn')">🖥️ Conhecer Conexões Seguras →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🛡️ Segurança da Informação</h3>
+        <p>Conjunto de práticas, políticas e ferramentas projetadas para proteger sistemas contra acessos não autorizados, interrupções ou destruição. Garante a confidencialidade, a integridade dos dados, a continuidade das operações e a confiança dos clientes.</p>
+        <button class="edu-service-btn" onclick="openModal('seguranca')">🔒 Ver Soluções de Segurança →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🧱 Firewall</h3>
+        <p>É um sistema de segurança que atua como uma barreira entre a rede interna e a internet, controlando o tráfego de dados com base em regras de segurança. Bloqueia acessos não autorizados e previne ataques.</p>
+        <p>Essencial para <strong>evitar invasões, proteger dados estratégicos</strong>, reduzir riscos financeiros e garantir a continuidade das operações.</p>
+        <button class="edu-service-btn" onclick="openModal('seguranca')">🔥 Ver Soluções de Segurança →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🦠 Malware</h3>
+        <p>Malware é um termo para softwares maliciosos criados para invadir, danificar ou explorar sistemas sem autorização — como vírus. Podem roubar dados, comprometer a segurança e causar lentidão nos sistemas.</p>
+        <p>Investir em segurança da informação mantém seus sistemas <strong>livres de malware</strong>, garantindo a integridade dos dados e a confiança dos clientes.</p>
+        <button class="edu-service-btn" onclick="openModal('seguranca')">🛡️ Proteger meu Negócio →</button>
+      </div>
+      <div class="edu-card">
+        <h3>📞 VoIP</h3>
+        <p>É uma tecnologia que permite realizar chamadas telefônicas pela internet, em vez de utilizar linhas telefônicas tradicionais. Significa mais economia e flexibilidade, com ligações de qualquer lugar com conexão à internet.</p>
+        <p>Permite <strong>integração com sistemas, gravação de chamadas</strong> e uso em dispositivos como computadores e smartphones.</p>
+        <button class="edu-service-btn" onclick="openModal('pabx')">📱 Conhecer PABX Cloud →</button>
+      </div>
+      <div class="edu-card">
+        <h3>🌐 Hospedagem</h3>
+        <p>Hospedagem é o serviço que permite armazenar e disponibilizar sites, sistemas e dados em servidores conectados à internet, garantindo que possam ser acessados a qualquer momento e de qualquer lugar.</p>
+        <p>Oferece recursos de <strong>armazenamento, segurança, desempenho e disponibilidade</strong> para manter aplicações online funcionando de forma estável.</p>
+        <button class="edu-service-btn" onclick="openModal('colocation')">🌐 Ver Hospedagem →</button>
+      </div>
+    </div>
+
+    <div class="quiz-cta">
+      <h2>Pronto para testar o que aprendeu?</h2>
+      <p>Preparamos um quiz rápido para você avaliar seus conhecimentos sobre tecnologia em nuvem e segurança digital.</p>
+      <button class="btn-white" onclick="goPage('quiz')">🎯 Iniciar Quiz</button>
+    </div>
+  </div>
+  <footer><span>MyData Experience</span> — Projeto desenvolvido na disciplina Fábrica de Projetos Ágeis III</footer>
+</div>
+
+<div id="page-comparativo" class="page">
+  <div class="comp-hero">
+    <div style="display:inline-block;background:rgba(26,188,254,0.15);border:1px solid rgba(26,188,254,0.3);color:var(--azul-hover);font-family:Montserrat,sans-serif;font-weight:700;font-size:0.75rem;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:2px;text-transform:uppercase;">⚖️ Comparativo de Provedores</div>
+    <h1>MyData Cloud × AWS × Azure</h1>
+    <p>Informações essenciais para uma decisão estratégica na contratação de serviços em nuvem.</p>
+  </div>
+
+  <div class="comp-why">
+    <div class="comp-why-inner">
+      <h2 class="section-title" style="text-align:left;">Por que comparar antes de escolher?</h2>
+      <p style="color:#445;font-size:0.95rem;line-height:1.7;max-width:700px;">A escolha de um provedor de nuvem impacta diretamente os custos, a segurança e a eficiência da operação. Comparar as alternativas disponíveis ajuda a encontrar a solução mais adequada para as necessidades do seu negócio, evitando gastos desnecessários e garantindo maior retorno sobre o investimento.
+</p>
+      <div class="why-cards" style="display: none;">
+        <div class="why-card">
+          <div class="score">10/10</div>
+          <div class="label">Previsibilidade de Custos</div>
+        </div>
+        <div class="why-card">
+          <div class="score">9/10</div>
+          <div class="label">Baixa Complexidade Técnica</div>
+        </div>
+        <div class="why-card">
+          <div class="score">10/10</div>
+          <div class="label">Aderência ao Mercado BR</div>
+        </div>
+        <div class="why-card">
+          <div class="score">10/10</div>
+          <div class="label">Suporte 24/7 Incluso</div>
+        </div>
+        <div class="why-card">
+          <div class="score">10/10</div>
+          <div class="label">Facilidade de Contratação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--azul-escuro);padding:64px 48px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:1.8rem;color:#fff;margin-bottom:8px;">Pontuação por Critério</h2>
+      <p style="color:rgba(255,255,255,0.5);margin-bottom:40px;font-size:0.95rem;">Escala de 0 a 10 — quanto maior, melhor o desempenho no critério avaliado.</p>
+      
+      <div style="display:flex;gap:28px;margin-bottom:36px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.8);font-family:Montserrat,sans-serif;font-weight:600;">
+          <div style="width:14px;height:14px;background:var(--azul-medio);border-radius:3px;"></div> MyData Cloud
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.8);font-family:Montserrat,sans-serif;font-weight:600;">
+          <div style="width:14px;height:14px;background:#f59e0b;border-radius:3px;"></div> AWS 
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.8);font-family:Montserrat,sans-serif;font-weight:600;">
+          <div style="width:14px;height:14px;background:#7c3aed;border-radius:3px;"></div> Azure
+        </div>
+      </div>
+
+      <div id="barChart"></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-bottom:20px;">
+    <h2 class="section-title">Matriz de Comparação Técnica</h2>
+    <p class="section-sub">Avaliação dos recursos, suporte e condições oferecidas por cada provedor.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério Comercial</th>
+          <th>MyData Cloud <span class="winner-badge">Indicado</span></th>
+          <th>AWS</th>
+          <th>Azure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;">
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;color:var(--azul-escuro);">💰 Moeda de Cobrança</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;border-left:3px solid var(--azul-medio);background:rgba(46,134,222,0.04);"><span style="color:#22c55e;margin-right:4px;">✔</span> Real (BRL) fixo em contrato</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#ef4444;margin-right:4px;">✘</span> Dólar (USD) flutuante via cartão OU Real (BRL) faturado via parceiros locais.</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#ef4444;margin-right:4px;">✘</span> Dólar (USD) flutuante via cartão OU Real (BRL) faturado via parceiros locais.</td>
+        </tr>
+        <tr style="background:#fafbff;">
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;color:var(--azul-escuro);">🧾 Impostos (NF-e)</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;border-left:3px solid var(--azul-medio);background:rgba(46,134,222,0.04);"><span style="color:#22c55e;margin-right:4px;">✔</span> Inclusos (Nota Fiscal brasileira de serviços)</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Retenções por conta do cliente (importação)</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Exige Invoice ou intermediários nacionais</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;color:var(--azul-escuro);">🛠 Gerenciamento</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;border-left:3px solid var(--azul-medio);background:rgba(46,134,222,0.04);"><span style="color:#22c55e;margin-right:4px;">✔</span> Humano e Gerenciado pela equipe do provedor</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Autoatendimento — cliente configura IaaS/PaaS</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Autoatendimento — cliente configura IaaS/PaaS</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;color:var(--azul-escuro);">🎓 Complexidade</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;border-left:3px solid var(--azul-medio);background:rgba(46,134,222,0.04);"><span style="color:#22c55e;margin-right:4px;">✔</span> Baixa — Ideal para empresas sem equipe interna de TI</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#ef4444;margin-right:4px;">✘</span> Altíssima — Exige equipe técnica ou parceiro certificado em arquitetura de nuvem.</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#ef4444;margin-right:4px;">✘</span> Altíssima — Exige equipe técnica ou parceiro certificado em engenharia de sistemas.</td>
+        </tr>
+        <tr style="background:#fafbff;">
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;color:var(--azul-escuro);">🎧 Suporte</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;border-left:3px solid var(--azul-medio);background:rgba(46,134,222,0.04);"><span style="color:#22c55e;margin-right:4px;">✔</span> 24/7 incluso — NOC em Marília-SP</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Pago à parte — Planos de suporte técnico cobrados sobre o percentual de consumo.</td>
+          <td style="padding:13px 18px;border-bottom:1px solid #f0f4f8;color:#556;"><span style="color:#f59e0b;margin-right:4px;">⚠</span> Pago à parte — Planos de suporte técnico ou contratos enterprise necessários.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" style="max-width:900px;text-align:center;">
+    <div style="background:#09264d;border-radius:16px;box-shadow:var(--sombra);padding:40px;">
+      <h3 style="font-family:Montserrat,sans-serif;font-weight:800;font-size:1.4rem;color:#ffffff;margin-bottom:12px;">Conclusão Técnico-Comercial</h3>
+      <p style="color:#f0f4f8;font-size:0.95rem;line-height:1.75;margin-bottom:24px;">Para médias e grandes empresas globais com dezenas de desenvolvedores internos, AWS e Azure possuem um ecossistema gigante de microsserviços. Porém, para empresas que buscam <strong>rodar sistemas estáveis (como ERPs, bancos de dados, servidores web e arquivos) sem surpresas na conta e com atendimento humano</strong>, a MyData Cloud entrega a melhor relação custo-benefício do mercado.</p>
+      <a href="https://www.mydatacloud.com.br/contact-3" class="btn-white" style="text-decoration: none; display: inline-block;">💬 Aquirir serviços da Mydata Cloud</a>
+    </div>
+  </div>
+  <footer><span>MyData Experience</span> — Projeto desenvolvido na disciplina Fábrica de Projetos Ágeis III</footer>
+</div>
+
+<div id="page-seguranca" class="page">
+  <div class="sec-hero">
+    <div style="display:inline-block;background:rgba(26,188,254,0.15);border:1px solid rgba(26,188,254,0.3);color:var(--azul-hover);font-family:Montserrat,sans-serif;font-weight:700;font-size:0.75rem;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:2px;text-transform:uppercase;">🛡️ Segurança Digital</div>
+    <h1>Descubra o Risco da Sua Empresa</h1>
+    <p>Responda algumas perguntas rápidas e veja qual é o nível de vulnerabilidade do seu negócio e como a MyData Cloud pode te proteger.</p>
+  </div>
+
+  <div class="section">
+    <div class="simulator-wrap">
+      <div class="sim-title">🔍 Simulador de Risco de Segurança</div>
+      <div class="sim-sub">Responda as perguntas abaixo e descubra o nível de vulnerabilidade da sua empresa em segundos.</div>
+      <div class="sim-questions">
+        <div class="sim-q">
+          <label>1. Como seus dados estão armazenados atualmente?</label>
+          <div class="sim-options">
+            <button class="sim-opt" data-q="1" data-v="3" onclick="selectOpt(this)">Servidor físico local</button>
+            <button class="sim-opt" data-q="1" data-v="2" onclick="selectOpt(this)">Dropbox / Google Drive pessoal</button>
+            <button class="sim-opt" data-q="1" data-v="1" onclick="selectOpt(this)">Nuvem genérica sem suporte</button>
+            <button class="sim-opt" data-q="1" data-v="0" onclick="selectOpt(this)">Nuvem gerenciada profissional</button>
+          </div>
+        </div>
+        <div class="sim-q">
+          <label>2. Sua empresa faz backups regulares?</label>
+          <div class="sim-options">
+            <button class="sim-opt" data-q="2" data-v="3" onclick="selectOpt(this)">Não fazemos backups</button>
+            <button class="sim-opt" data-q="2" data-v="2" onclick="selectOpt(this)">Às vezes, manualmente</button>
+            <button class="sim-opt" data-q="2" data-v="1" onclick="selectOpt(this)">Sim, mas sem monitoramento</button>
+            <button class="sim-opt" data-q="2" data-v="0" onclick="selectOpt(this)">Sim, automatizado e verificado</button>
+          </div>
+        </div>
+        <div class="sim-q">
+          <label>3. Qual é o controle de acesso dos sistemas?</label>
+          <div class="sim-options">
+            <button class="sim-opt" data-q="3" data-v="3" onclick="selectOpt(this)">Senhas simples compartilhadas por todos</button>
+            <button class="sim-opt" data-q="3" data-v="2" onclick="selectOpt(this)">Cada um tem sua senha, mas sem segundo fator (MFA)</button>
+            <button class="sim-opt" data-q="3" data-v="1" onclick="selectOpt(this)">Temos senhas fortes e MFA em alguns sistemas</button>
+            <button class="sim-opt" data-q="3" data-v="0" onclick="selectOpt(this)">Políticas rígidas, controle por usuário (IAM) e logs de acesso</button>
+          </div>
+        </div>
+        <div class="sim-q">
+          <label>4. Como sua empresa está adequada à LGPD?</label>
+          <div class="sim-options">
+            <button class="sim-opt" data-q="4" data-v="3" onclick="selectOpt(this)">Não sei o que é ou não iniciamos</button>
+            <button class="sim-opt" data-q="4" data-v="2" onclick="selectOpt(this)">Temos apenas uma política de privacidade no site</button>
+            <button class="sim-opt" data-q="4" data-v="1" onclick="selectOpt(this)">Processos mapeados, mas sem auditoria constante</button>
+            <button class="sim-opt" data-q="4" data-v="0" onclick="selectOpt(this)">Totalmente adequado e armazenado em Data Center soberano</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sim-result" id="simResult">
+        <div id="simResultContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--azul-claro);padding:72px 48px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:var(--azul-escuro);margin-bottom:12px;">Por que escolher a MyData Cloud?</h2>
+        <p style="color:#556;font-size:0.95rem;line-height:1.75;max-width:620px;margin:0 auto;">Cada resposta do simulador revela uma vulnerabilidade real. A MyData tem uma solução específica para cada uma delas.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div style="background:#fff;border-radius:16px;box-shadow:var(--sombra);overflow:hidden;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 8px 32px rgba(46,134,222,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(10,37,64,0.12)'">
+          <div style="background:linear-gradient(135deg,var(--azul-escuro),#1a4a8a);padding:24px;text-align:center;">
+            <div style="font-size:2.2rem;margin-bottom:8px;">🛡️</div>
+            <h4 style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.9rem;color:#fff;line-height:1.3;">Firewall de Próxima Geração</h4>
+          </div>
+          <div style="padding:20px;">
+            <p style="font-size:0.83rem;color:#556;line-height:1.65;">Firewalls avançados para proteger a rede contra acessos não autorizados, bloqueando ameaças antes que elas comprometam a infraestrutura da empresa.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:16px;box-shadow:var(--sombra);overflow:hidden;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 8px 32px rgba(46,134,222,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(10,37,64,0.12)'">
+          <div style="background:linear-gradient(135deg,var(--azul-escuro),#1a4a8a);padding:24px;text-align:center;">
+            <div style="font-size:2.2rem;margin-bottom:8px;">🔒</div>
+            <h4 style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.9rem;color:#fff;line-height:1.3;">Proteção Contra Malware</h4>
+          </div>
+          <div style="padding:20px;">
+            <p style="font-size:0.83rem;color:#556;line-height:1.65;">Sistemas proativos de detecção e neutralização de vírus, ransomware e outros malwares, garantindo a integridade dos dados corporativos.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:16px;box-shadow:var(--sombra);overflow:hidden;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 8px 32px rgba(46,134,222,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(10,37,64,0.12)'">
+          <div style="background:linear-gradient(135deg,var(--azul-escuro),#1a4a8a);padding:24px;text-align:center;">
+            <div style="font-size:2.2rem;margin-bottom:8px;">📡</div>
+            <h4 style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.9rem;color:#fff;line-height:1.3;">Monitoramento de Rede em Tempo Real</h4>
+          </div>
+          <div style="padding:20px;">
+            <p style="font-size:0.83rem;color:#556;line-height:1.65;">Vigilância contínua da infraestrutura para identificar atividades suspeitas, detectar ameaças rapidamente e minimizar impactos ao negócio.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:16px;box-shadow:var(--sombra);overflow:hidden;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 8px 32px rgba(46,134,222,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(10,37,64,0.12)'">
+          <div style="background:linear-gradient(135deg,var(--azul-escuro),#1a4a8a);padding:24px;text-align:center;">
+            <div style="font-size:2.2rem;margin-bottom:8px;">🔍</div>
+            <h4 style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.9rem;color:#fff;line-height:1.3;">Análise e Testes de Segurança</h4>
+          </div>
+          <div style="padding:20px;">
+            <p style="font-size:0.83rem;color:#556;line-height:1.65;">Avaliações periódicas, relatórios detalhados e testes de penetração para identificar vulnerabilidades e fortalecer a segurança do ambiente de TI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-final">
+    <h2>Deseja blindar a sua infraestrutura?</h2>
+    <p>Fale agora sem custos com nossa equipe e receba uma análise customizada.</p>
+    <a href="https://www.mydatacloud.com.br/contact-3" class="btn-white" style="text-decoration: none; display: inline-block;">💬 Fale conosco</a>
+  </div>
+  <footer><span>MyData Experience</span> — Projeto desenvolvido na disciplina Fábrica de Projetos Ágeis III</footer>
+</div>
+
+<div id="page-quiz" class="page">
+  <div style="background:linear-gradient(135deg,#0A2540,#14355a);color:#fff;padding:60px 48px;text-align:center;">
+    <div style="display:inline-block;background:rgba(26,188,254,0.15);border:1px solid rgba(26,188,254,0.3);color:var(--azul-hover);font-family:Montserrat,sans-serif;font-weight:700;font-size:0.75rem;padding:6px 16px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase;">🎯 Quiz Interativo</div>
+    <h1 style="font-size:2.2rem;font-weight:900;">Teste Seu Conhecimento! </h1>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:6px;">Avalie seu aprendizado sobre infraestrutura web estável e proteção de dados.</p>
+  </div>
+
+  <div class="quiz-wrap">
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="quizProgress" style="width: 0%;"></div>
+    </div>
+
+    <div id="quizContainer" style="background:#fff;border-radius:18px;box-shadow:var(--sombra);padding:40px 36px;border:1px solid #f0f4f8;">
+      <div class="quiz-q-num" id="quizQNum"></div>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <div class="quiz-options" id="quizOptions"></div>
+      
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      
+      <div class="quiz-nav">
+        <button class="btn-primary" id="quizNext" onclick="nextQuestion()" style="display:none;align-items:center;gap:6px;font-size:0.85rem;padding:12px 24px;"></button>
+      </div>
+    </div>
+
+    <div id="quizResult" style="display:none;background:#fff;border-radius:18px;box-shadow:var(--sombra);padding:48px 32px;text-align:center;border:1px solid #f0f4f8;">
+      <div id="quizEmoji" style="font-size:4rem;margin-bottom:12px;">🏆</div>
+      <div class="quiz-score" id="quizScoreDisplay">0/0</div>
+      <h2 style="font-family:Montserrat,sans-serif;font-weight:900;color:var(--azul-escuro);margin-bottom:8px;" id="quizResultTitle"></h2>
+      <p style="color:#556;line-height:1.6;max-width:480px;margin:0 auto 36px;font-size:0.95rem;" id="quizResultMsg"></p>
+      
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="restartQuiz()">🔄 Jogar Novamente</button>
+        <button class="btn-outline" style="color:var(--azul-escuro);border-color:var(--azul-medio);" onclick="goPage('education')">📚 Revisar Conteúdo</button>
+      </div>
+    </div>
+  </div>
+  <footer><span>MyData Experience</span> — Projeto desenvolvido na disciplina Fábrica de Projetos Ágeis III</footer>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
